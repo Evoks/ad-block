@@ -1,57 +1,57 @@
 {
-  "name": "ad-block",
-  "main": "./build/Release/ad-block",
-  "version": "4.1.1",
-  "description": "Ad block engine used in the Brave browser for ABP filter syntax based lists like EasyList.",
-  "directories": {
-    "test": "test"
-},
-"dependencies": {
-    "bloom-filter-cpp": "1.1.8",
-    "cppunitlite": "^1.0.0",
-    "hashset-cpp": "^2.1.0",
-    "nan": "^2.10.0"
-},
-"devDependencies": {
-    "commander": "^2.15.1",
-    "mocha": "^5.2.0",
-    "node-gyp": "^3.7.0",
-    "nsp": "^3.2.1",
-    "pre-commit": "^1.2.2",
-    "s3": "^4.4.0",
-    "standard": "^11.0.1"
-},
-"scripts": {
-    "test": "npm run test-cpp && npm run test-js",
-    "test-cpp": "make test",
-    "test-js": "mocha test/js",
-    "build": "make",
-    "sample": "make sample",
-    "perf": "make perf",
-    "preinstall": "npm install bloom-filter-cpp && npm install hashset-cpp",
-    "install": "node-gyp rebuild",
-    "lint": "npm run lint-cpp && npm run lint-js",
-    "lint-cpp": "./scripts/cpplint.py",
-    "lint-js": "standard",
-    "checks": "npm run check-security",
-    "check-security": "nsp check",
-    "data-files": "node scripts/generateDataFiles.js",
-    "manifest-files": "node scripts/generateManifestFiles.js",
-    "upload": "node scripts/uploadDataFiles.js"
-},
-"repository": {
-    "type": "git",
-    "url": "git+https://github.com/brave/ad-block.git"
-},
-"author": "Brian R. Bondy <netzen@gmail.com> (http://www.brianbondy.com)",
-"license": "MPL-2.0",
-"gypfile": true,
-"bugs": {
-    "url": "https://github.com/brave/ad-block/issues"
-},
-"homepage": "https://github.com/brave/ad-block#readme",
-"pre-commit": [
-    "lint-cpp",
-    "lint-js"
-]
+    "name": "ad-block",
+    "main": "./build/Release/ad-block",
+    "version": "4.1.1",
+    "description": "Ad block engine used in the Brave browser for ABP filter syntax based lists like EasyList.",
+    "directories": {
+        "test": "test"
+    },
+    "dependencies": {
+        "bloom-filter-cpp": "^1.2.0",
+        "cppunitlite": "^1.0.0",
+        "hashset-cpp": "2.0.2",
+        "nan": "^2.10.0"
+    },
+    "devDependencies": {
+        "commander": "^2.15.1",
+        "mocha": "^5.2.0",
+        "node-gyp": "^3.7.0",
+        "nsp": "^3.2.1",
+        "pre-commit": "^1.2.2",
+        "s3": "^4.4.0",
+        "standard": "^11.0.1"
+    },
+    "scripts": {
+        "test": "npm run test-cpp && npm run test-js",
+        "test-cpp": "make test",
+        "test-js": "mocha test/js",
+        "build": "make",
+        "sample": "make sample",
+        "perf": "make perf",
+        "preinstall": "npm install bloom-filter-cpp && npm install hashset-cpp",
+        "install": "node-gyp rebuild",
+        "lint": "npm run lint-cpp && npm run lint-js",
+        "lint-cpp": "./scripts/cpplint.py",
+        "lint-js": "standard",
+        "checks": "npm run check-security",
+        "check-security": "nsp check",
+        "data-files": "node scripts/generateDataFiles.js",
+        "manifest-files": "node scripts/generateManifestFiles.js",
+        "upload": "node scripts/uploadDataFiles.js"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/brave/ad-block.git"
+    },
+    "author": "Brian R. Bondy <netzen@gmail.com> (http://www.brianbondy.com)",
+    "license": "MPL-2.0",
+    "gypfile": true,
+    "bugs": {
+        "url": "https://github.com/brave/ad-block/issues"
+    },
+    "homepage": "https://github.com/brave/ad-block#readme",
+    "pre-commit": [
+        "lint-cpp",
+        "lint-js"
+    ]
 }
